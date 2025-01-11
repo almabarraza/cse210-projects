@@ -9,7 +9,7 @@ class Program
         List<int> numbers = new List<int>();
         Console.WriteLine("Enter a list of numbers, type 0 when finished.");
         int number;
-        int sumNumbers = 0; 
+        float sumNumbers = 0; 
         int size = 0;
         float average = 0;
         int largestNumber = 0;
