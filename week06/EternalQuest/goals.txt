@@ -1,0 +1,4 @@
+2950
+Simple Goal:learn math,learn basic ecuations,1000,True
+Eternal Goal:Read scriptures,read every day 15 minutes,200
+CheckList Goal:Go the temple,go 5 times per year,250,500,5,5

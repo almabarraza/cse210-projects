@@ -1,39 +1,50 @@
 using System;
+using System.Reflection.Metadata.Ecma335;
 
-public class Goal
+public abstract class Goal
 {
-    private string _shortName;
+    protected string _shortName;
     private string _description;
     private string _points;
 
 
     public Goal(string name, string description, string points)
     {
-
+        _shortName = name;
+        _description = description;
+        _points = points;
         
     }
 
-    public void RecordEvent()
-    {
+    public abstract void RecordEvent();
+  
 
+    public abstract bool IsComplete();
+   
+
+    public virtual string GetDetailString()
+    {
+        if (IsComplete() == false)
+        {
+            return $"[ ] {_shortName} ({_description}) {_points}";
+        }
+        else
+        {
+            return $"[X] {_shortName} ({_description}) {_points}";
+        }
     }
 
-    public bool IsComplete()
+    public abstract string GetStringRepresentation();
+
+    public virtual string GetName()
     {
-        return false;
+        return _shortName;
     }
-
-    public string GetDetailString()
+   
+    public virtual string GetPoints()
     {
-        return "";
+        return _points;
     }
-
-    public string GetStringRepresentation()
-    {
-        return "";
-
-    }
-
 
 
 
